@@ -1,0 +1,6 @@
+{
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "zetec:item/raw_sapphire_block"
+  }
+}
