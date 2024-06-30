@@ -1,5 +1,7 @@
 package com.dreamcatcher.zetec;
 
+import com.dreamcatcher.zetec.block.ModBlock;
+import com.dreamcatcher.zetec.item.ModCreativeModTabs;
 import com.dreamcatcher.zetec.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -49,7 +51,10 @@ public class ZETEC
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+        
         ModItems.register(modEventBus);
+        ModBlock.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -78,8 +83,10 @@ public class ZETEC
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.RAW_SAPPHIRE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

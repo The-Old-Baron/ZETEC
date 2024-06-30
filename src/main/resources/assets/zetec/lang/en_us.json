@@ -1,3 +1,8 @@
 {
-  "item.zetec.sapphire": "Sapphire"
+  "item.zetec.sapphire": "Sapphire",
+  "item.zetec.raw_sapphire": "Raw Sapphire",
+  
+  "block.zetec.sapphire_block": "Sapphire Block",
+  "block.zetec.raw_sapphire_block": "Sapphire Raw",
+  "creativetab.zetec_tab": "Z - ETEC"
 }
